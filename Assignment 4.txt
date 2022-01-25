@@ -1,0 +1,50 @@
+1. What exactly is []?
+
+ANS: [] is a emplty list
+
+2. In a list of values stored in a variable called spam, how would you assign the value &#39;hello&#39; as the
+third value? (Assume [2, 4, 6, 8, 10] are in spam.)
+ANS: spam.insert(3,'hello')
+
+3. What is the value of spam[int(int(&#39;3&#39; * 2) / 11)]?
+ANS: 'd'
+
+4. What is the value of spam[-1]?
+ANS: 'd'
+5. What is the value of spam[:2]?
+ANS: ['a', 'b']
+
+Let&#39;s pretend bacon has the list [3.14, &#39;cat,&#39; 11, &#39;cat,&#39; True] for the next three questions.
+6. What is the value of bacon.index(&#39;cat&#39;)?
+ANS: 1
+7. How does bacon.append(99) change the look of the list value in bacon?
+ANS: [3.14, 'cat', 11, 'cat', True, 99]
+8. How does bacon.remove(&#39;cat&#39;) change the look of the list in bacon?
+ANS: [3.14, 11, 'cat', True, 99]
+
+9. What are the list concatenation and list replication operators?
+ANS: Concatination(+) = l + l1
+     replication(*) = l * 3
+10. What is difference between the list methods append() and insert()?
+ANS: append method add the element at the end of the list
+     insert method add the element in the list on the basis of the index given by the user.
+11. What are the two methods for removing items from a list?
+ANS: remove and pop are the methods for removing items from a list.
+12. Describe how list values and string values are identical.
+ANS: list Values are stored in the form of int, string, complex, tuple, list etc.
+     String values are stored in the form of char enclosed with '' or "" or str()
+13. What&#39;s the difference between tuples and lists?
+ANS: Tuples : - Tuples are imutable collection
+     List : List is a mutable collection 
+14. How do you type a tuple value that only contains the integer 42?
+ANS: int
+15. How do you get a list value&#39;s tuple form? How do you get a tuple value&#39;s list form?
+ANS: by typecasting
+     tuple(l), where l is a list
+     list(t), where t is a tuple
+16. Variables that &quot;contain&quot; list values are not necessarily lists themselves. Instead, what do they
+contain?
+ANS: element of the list
+17. How do you distinguish between copy.copy() and copy.deepcopy()?
+ANS: copy.copy() will copy the collection in different location and can be checked by using id() upto an extent.
+    copy.deepcopy() will copy the collection recursively and only this will only applicable in case of nested list where using deep copy will store a new location.
