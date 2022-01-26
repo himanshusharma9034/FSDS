@@ -1,0 +1,74 @@
+Q1. Write a Python Program to Find the Factorial of a Number?
+#5! = 5 x 4 x 3 x 2 x 1
+ANS:
+n = int(input("Enter the number for calculating the factorial : "))
+s = 1
+for i in range(1,n+1):
+    s = s * i
+print(s)
+
+
+# Q2. Write a Python Program to Display the multiplication Table?
+s = 1
+n = int(input("Enter the number for printing the table"))
+while s < 11:
+    print(n ," x ", s ,"=", n*s)
+    s += 1
+
+# Q3. Write a Python Program to Print the Fibonacci sequence?
+
+def Fibonacci (n):
+    if n < 0:
+        return "Can not be calculated"
+    elif n == 0:
+        return 0
+    elif n ==1 or n == 2:
+        return 1
+    else:
+        return Fibonacci(n-1) + Fibonacci(n-2)
+Fibonacci(12)
+
+
+# 4. Write a Python Program to Check Armstrong Number?
+# a = int(input("Enter the number : "))
+a = input("ENter the number : ")
+a1 = 0
+for i in range(len(a)):
+    d = int(a[i])**3
+    a1 = a1 + d
+print(a1)
+
+if int(a) == a1:
+    print("Number is Armstrong number")
+else:
+    print("Number is not a Armstrong number")
+
+
+# 5. Write a Python Program to Find Armstrong Number in an Interval?
+l = int(input("Enter the starting digit"))
+u = int(input("Enter the ending digit"))
+
+for i in range(l, u + 1):
+   c = len(str(i))
+   sum = 0
+   t = i
+   while t > 0:
+       digit = t % 10
+       sum += digit **c
+       t //= 10
+
+   if i == sum:
+       print("Armstrong Number is : {} ".format(i))
+
+
+# 6. Write a Python Program to Find the Sum of Natural Numbers?
+a = int(input("Enter the number : "))
+if a < 0:
+   print("The number is negative")
+else:
+   s = 0
+   while(a > 0):
+       s += a
+       a -= 1
+   print("The sum is : ", s)
+
