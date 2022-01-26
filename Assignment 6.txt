@@ -1,0 +1,43 @@
+1. What are escape characters, and how do you use them?
+ANS: Escape ----> "\", for using we can use by using  r"\" or "\\"
+
+
+2. What do the escape characters n and t stand for?
+ANS: n = newlines, t = horizontal tab
+
+3. What is the way to include backslash characters in a string?
+ANS: r"\" or "\\"
+
+4. The string Howl's Moving Castle&quot; is a correct value. Why isn't the single quote character in the
+word Howl's not escaped a problem?
+ANS: Since the string is already quated with double quated so if we want to use quotes inbetween we need to use single quotes.
+
+5. How do you write a string of newlines if you don't want to use the n character?
+ANS: By using \n character
+
+6. What are the values of the given expressions?
+'Hello, world!'[1]      ANS: 'e'
+'Hello, world!'[0:5]    ANS: 'Hello'
+'Hello, world!'[:5]     ANS: 'Hello'
+'Hello, world!'[3:]     ANS: 'lo, world!'
+
+7. What are the values of the following expressions?
+'Hello'.upper()                 ANS: 'HELLO'
+'Hello'.upper().isupper()       ANS: True
+'Hello'.upper().lower()         ANS: 'hello'
+
+8. What are the values of the following expressions?
+'Remember, remember, the fifth of July.'.split()
+'-'.join('There can only one.'.split())
+
+ANS: ['Remember,', 'remember,', 'the', 'fifth', 'of', 'July.']
+ANS: 'There-can-only-one.'
+
+9. What are the methods for right-justifying, left-justifying, and centering a string?
+ANS:
+right-justifying : string.ljust()
+left-justifying : string.ljust()
+centering : string.center()
+
+10. What is the best way to remove whitespace characters from the start or end?
+ANS: string.strip()
