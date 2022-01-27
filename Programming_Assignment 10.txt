@@ -1,0 +1,130 @@
+# 1. Write a Python program to find sum of elements in list?
+def list_sum(*args):
+    s=0
+    l = []
+    for i in args:
+        l.extend(i)
+    for j in l:
+        s = s+j
+    return ("Sum of the elements in the list is  : {}".format(s))
+list_sum([1,2,3,4,5,6])
+
+# 2. Write a Python program to Multiply all numbers in the list?
+def list_mul(*args):
+    s=1
+    l = []
+    for i in args:
+        l.extend(i)
+    for j in l:
+        s = s*j
+    return ("Multiplication of the elements in the list is  : {}".format(s))
+list_mul([1,2,3])
+
+# 3. Write a Python program to find smallest number in a list?
+def list_smallest_number(*args):
+    l = []    
+    for i in args:
+        if type(i) == list:
+            for j in i:
+                if type(j) == int:
+                    return ("Sum of the elements in the list is  : {}".format(min(i)))
+                else:
+                    return("Plese enter the list elements in the form of integer")
+list_smallest_number([7,2,3,4,5,6])
+
+# 4. Write a Python program to find largest number in a list?
+def list_largest_number(*args):
+    l = []    
+    for i in args:
+        if type(i) == list:
+            for j in i:
+                if type(j) == int:
+                    return ("Sum of the elements in the list is  : {}".format(max(i)))
+                else:
+                    return("Plese enter the list elements in the form of integer")
+list_largest_number([7,2,3,4,5,6])
+
+# 5. Write a Python program to find second largest number in a list?
+def list_Second_largest_number(*args):
+    l = []    
+    for i in args:
+        if type(i) == list:
+            for j in i:
+                if type(j) == int:
+                    i.sort()
+                    return ("Sum of the elements in the list is  : {}".format(i[-2]))
+                else:
+                    return("Plese enter the list elements in the form of integer")
+list_Second_largest_number([7,2,3,8,5,6])
+
+# 6. Write a Python program to find N largest elements from a list?
+l1 = [1, 13, 23, 95, 14, 33, 16, 24, 30]
+def N_Largest_element(l1, n=2):
+    l = []
+    for i in range(0, n): 
+        max1 = 0   
+        for j in range(len(l1)):     
+            if l1[j] > max1:
+                max1 = l1[j]          
+        l1.remove(max1)
+        l.append(max1)     
+    print(l)
+N_Largest_element(l1)
+
+# 7. Write a Python program to print even numbers in a list?
+def list_even_number(*args):
+    l = []    
+    for i in args:
+        if type(i) == list:
+            for j in i:
+                if j % 2 == 0:
+                    l.append(j)
+                    
+            return ("Sum of the elements in the list is  : {}".format(l))
+        else:
+            return("Plese enter the list elements in the form of integer")
+list_even_number([7,2,3,8,5,6])
+
+# 8. Write a Python program to print odd numbers in a List?
+def list_odd_number(*args):
+    l = []    
+    for i in args:
+        if type(i) == list:
+            for j in i:
+                if j % 2 != 0:
+                    l.append(j)
+                    
+            return ("Sum of the elements in the list is  : {}".format(l))
+        else:
+            return("Plese enter the list elements in the form of integer")
+list_odd_number([7,2,3,8,5,6])
+
+# 9. Write a Python program to Remove empty List from List?
+    # l = [1,2,3,[],4,5,6]
+def remove_empty_list(*args):
+    l1 = []
+    l2 = []
+    for k in args:
+        if type(k) == list:
+            for i in l:
+                if i == l1:
+                    l.remove(i)
+                else:
+                    l2.append(i)
+    return(l2)
+remove_empty_list([1,2,3,[],4,5,[],6])
+
+# 10. Write a Python program to Cloning or Copying a list?
+import copy
+l = [1,2,3,4,5]
+l2 = l.copy()
+l2
+# 11. Write a Python program to Count occurrences of an element in a list?
+l = [1,2,3,4,4,4,5,5,6,6,'hjhjh','hjhjh']
+def count_occurances(*args):
+    for k in args:
+        if type(k) == list:
+            for i in l:
+                print(i,"Count is : ",l.count(i))
+                continue
+count_occurances(l)
