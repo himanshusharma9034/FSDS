@@ -1,0 +1,76 @@
+# 1. Write a Python program to find words which are greater than given length k?
+k = "himanshu"
+l = ['fdsfd','sdfdsasfdafs','fsafdashhh','dddddafsfrf','erer','rerer']
+def greater_length_of_K(l,k):
+    len(k)
+    l1 = []
+    for i in l:
+        if len(i) > len(k):
+            l1.append(i)
+        else:
+            continue
+    return l1
+greater_length_of_K(l,k)
+
+# 2. Write a Python program for removing i-th character from a string?
+s = "Himanshu sharma"
+N = 2
+def remove_Ith_char(s,N):
+    l = []
+    for i in s:
+        l.append(i)
+    l.pop(N)
+    return "".join(l)
+remove_Ith_char(s,N)   
+
+# 3. Write a Python program to split and join a string?
+def split_join(s = 'himanhsu sharma'):
+    return "Split is given by : ", s.split(),"Join is given by : ","".join(s.split())
+split_join()
+
+# 4. Write a Python to check if a given string is binary string or not?
+s = "himanshu0sharma1"
+def check_binary_form(s):
+    if '0' or '1' in s:
+        return("Binary form")
+    else:
+        return("Not in a binary form")
+check_binary_form(s)
+
+# 5. Write a Python program to find uncommon words from two Strings?
+s = "Himanshu sharma himanshu sharMa"
+r = "Himanshu sharMa FSDS"
+l = []  
+def uncommon_words(s, r):
+    c = {}  
+    for i in s.split():
+        c[i] = c.get(i, 0) + 1
+    for j in r.split():
+        c[j] = c.get(j, 0) + 1
+    for k in c:
+        if c[k] == 1:
+            l.append(k)
+    return l
+  
+uncommon_words(s, r)
+
+# 6. Write a Python to find all duplicate characters in string?
+s = "himanshu sharma"
+def duplicate_char(s):
+    l1 = []
+    d = {i : s.count(i) for i in s}
+    for i in d.keys():
+        if d[i] > 1:
+            l1.append(i)
+    return l1
+duplicate_char(s)
+
+# 7. Write a Python Program to check if a string contains any special character?
+# list_of_special_char = ['!' or '@' or '#' or '$' or'%' or '^'or'&' or'*']
+s = 'Himanshu@sharma!'
+def check_special_char(s):
+    if '!' or '@' or '#' or '$' or'%' or '^'or'&' or'*' in s:
+        return("String contain special character")
+    else:
+        return("String does not contain special character")
+check_special_char(s)
