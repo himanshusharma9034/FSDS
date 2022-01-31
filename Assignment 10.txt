@@ -1,0 +1,54 @@
+1. How do you distinguish between shutil.copy() and shutil.copytree()?
+ANS: shutil.copy() will copy only a file
+     shutil.copytree() will copy the entire folder and files containing inside the folder.
+
+2. What function is used to rename files??
+ANS: import os
+     os.rename() is used to rename a files
+
+3. What is the difference between the delete functions in the send2trash and shutil modules?
+ANS: send2trash : - will movw the file into recyclebin.
+    shutil := It will delete the file permanently.
+
+4.ZipFile objects have a close() method just like File objects’ close() method. What ZipFile method is
+equivalent to File objects’ open() method?
+ANS: openread() is the method which is used and equivalent t file object open method
+
+5. Create a programme that searches a folder tree for files with a certain file extension (such as .pdf
+or .jpg). Copy these files from whatever location they are in to a new folder.
+
+ANS:
+
+import os
+os.mkdir('assignment171')
+os.mkdir('assignment181')
+os.chdir('c:\\Users\\Himan\\OneDrive\\Desktop\\SS\\Pandas\\Full Stck Data Science\\Python\\Jan_Sart_PYTHON\\himanshu\\')
+l = ['a.text','b.text','c.text','d.text','e.text','f.text','g.text''h.text','i.text','j.text']
+l1 = []
+for i in l:
+    f = open(i,'w')
+    f = open(i,'r+')
+    f.write("Himanshu sharma")
+    f.seek(0)
+    r = f.read()
+    l1.append(r)
+l1
+for i in l1:
+    f = open('new.txt','w')
+    f.seek(len(i))
+    f.writelines(i)
+
+for j in 'new.txt':    
+    f = open('new.txt','r+')
+    # f.seek(0)
+    e = f.read()
+    print(e)
+f.close()
+
+import shutil
+for i in os.listdir(os.getcwd()):
+    if i is not 'new.txt':
+        shutil.move(i,'assignment181')
+        # print('Available')
+    else:
+        print('Not Available')
