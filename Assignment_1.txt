@@ -1,0 +1,38 @@
+Q1. What is the purpose of Python's OOP?
+ANS: - OOPS is a Object Oriented programming and helps in reusability, having classe and objects.
+
+Q2. Where does an inheritance search look for an attribute?
+ANs:- It looks for the lowest occurance of an attribute name.
+
+Q3. How do you distinguish between a class object and an instance object?
+Ans:- For creating an object we need to define class, whereas object is a instance of a class.
+
+Q4. What makes the first argument in a class’s method function special?
+ANS: It shows the reference of the current instance of the class.
+
+Q5. What is the purpose of the __init__ method?
+ANS:- __init__ is a constructor, which initilaze and introduce the object attribute to the class.
+
+Q6. What is the process for creating a class instance?
+ANS:- class assignment_OOPS:
+        def __init__(self, assignment, time):
+            self.assignment = assignment
+            self.time = time
+
+object = assignment_OOPS("FSDS")
+print(object.assignment)
+
+Q7. What is the process for creating a class?
+Ans:- class assignment_OOPS:
+        def __init__(self, assignment):
+            self.assignment = assignment
+
+Q8. How would you define the superclasses of a class?
+ANS:- call the __init__()(constructor) of the assignment_OOPS class, allowing us to use it in the Square class 
+class assignment_OOPS:
+        def __init__(self, assignment, time):
+            self.assignment = assignment
+            self.time = time
+class call1(Assignment2):
+    def __init__(self, assignment):
+        super().__init__(assignment)
